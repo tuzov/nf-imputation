@@ -1,6 +1,7 @@
 nextflow.enable.dsl=2
-params.input = "/home/centos/nf-inmputation/testData/chr*.vcf.gz"
-vcf_ch = Channel.fromPath(params.input)
+//params.input = "/home/centos/nf-inmputation/testData/chr*.vcf.gz"
+//vcf_ch = Channel.fromPath(params.input)
+vcf_ch = Channel.fromPath(params.vcffiles)
 params.fasta_ref = '/home/centos/nf-imputation/testData/reference/Homo_sapiens_assembly38.fasta'
 
 process tabix {
