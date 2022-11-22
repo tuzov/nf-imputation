@@ -4,7 +4,7 @@ nextflow.enable.dsl=2
 params.input = "/chr*.vcf.gz"
 params.vcffiles = params.vcfdir + params.input
 vcf_ch = Channel.fromPath(params.vcffiles)
-params.fasta_ref = '/home/centos/nf-imputation/testData/reference/Homo_sapiens_assembly38.fasta'
+params.fasta_ref = '/gpfs/space/databases/broadinstitute/references/hg38/v0/Homo_sapiens_assembly38.fasta'
 
 process tabix {
   publishDir "./"
