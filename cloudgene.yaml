@@ -6,8 +6,11 @@ author: Vlad Tuzov
 website: https://github.com/tuzov/nf-imputation
                    
 workflow:                                                                      
-                   
   steps:                               
+    - name: Print all input file
+      cmd: /bin/ls $vcffiles
+      stdout: true
+    
     - name: Running nf-tst1
       type: nextflow                                                           
       script: tst1.nf                                                          
