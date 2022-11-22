@@ -109,6 +109,7 @@ process qc5 {
 }
 
 workflow {
+  vcf_ch.view()
   tabix (vcf_ch)
   qc1 (vcf_ch)
   qc2 (qc1.out)

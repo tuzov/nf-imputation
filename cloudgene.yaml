@@ -1,14 +1,14 @@
 id: nf-tst1                                                              
 name: nf-tst1                                       
-version: 0.1                           
+version: 0.2                           
 description: A nextflow test for tst1.nf
 author: Vlad Tuzov                     
 website: https://github.com/tuzov/nf-imputation
-                   
+
 workflow:                                                                      
   steps:                               
     - name: Print all input file
-      cmd: /bin/ls $vcffiles
+      cmd: /bin/ls $vcfdir
       stdout: true
     
     - name: Running nf-tst1
@@ -23,7 +23,7 @@ workflow:
       details: Enter at least two words 
       type: local_folder                     
       required: true                                                           
-                                                                               
+
   outputs:                                                                     
 
     - id: outdir                                                               
